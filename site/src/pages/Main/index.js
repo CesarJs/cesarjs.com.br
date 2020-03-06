@@ -1,18 +1,19 @@
 /* eslint-disable react/no-unused-state */
-import React, { Component } from "react";
-import { FaGithubAlt, FaPlus, FaSpinner } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { FaGithubAlt, FaPlus, FaSpinner } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
-import api from "../../services/api";
+import api from '../../services/api';
 
-import { Container, Form, SubmitButton, List } from "./styles";
+import Container from '../../components/Container';
+import { Form, SubmitButton, List } from './styles';
 
 export default class Main extends Component {
     // eslint-disable-next-line react/state-in-constructor
     state = {
-        newRepo: "",
+        newRepo: '',
         repositories: [],
-        loading: false
+        loading: false,
     };
 
     // Carregar dados
